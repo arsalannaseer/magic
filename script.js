@@ -4,7 +4,7 @@ let listen = document.querySelector('.listen');
 let listenAgain = document.querySelector('.listenagain');
 let mybutton = document.getElementById("myBtn");
 let focusOnLyrics = true;
-let buttonText = [ 'Top', 'Go to lyrics'];
+let buttonText = [ 'Top', 'Lyrics'];
 
 mybutton.addEventListener('click', (event) => {
     focusOnLyrics = !focusOnLyrics;
