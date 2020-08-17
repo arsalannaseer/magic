@@ -2,7 +2,16 @@ let audioTrack = document.querySelector("audio");
 let article = document.querySelector("#article");
 let listen = document.querySelector('.listen');
 let listenAgain = document.querySelector('.listenagain');
+let mybutton = document.getElementById("myBtn");
+let focusOnLyrics = true;
+let buttonText = [ 'Top', 'Go to lyrics'];
 
+mybutton.addEventListener('click', (event) => {
+    focusOnLyrics = !focusOnLyrics;
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0;
+    mybutton.innerText = buttonText[focusOnLyrics == true ? 0 : 1];
+})
 
 listen.addEventListener('click', () => {
     if(audioTrack.paused)       {
@@ -72,10 +81,13 @@ syncData.forEach((el, index) => {
 audioTrack.addEventListener("timeupdate", function (e) {
 
     syncData.forEach((el, index) => {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        }
         let element = document.querySelector(`#c_${index}`);
         if (audioTrack.currentTime >= el.start && audioTrack.currentTime <= el.end) {
             element.classList.add('active');
-            element.scrollIntoView();
+            if(focusOnLyrics) element.scrollIntoView();
         }
         else{
             element.classList.remove('active');
