@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 article{
     font-family: 'Kalam', cursive;
     font-weight: bold;

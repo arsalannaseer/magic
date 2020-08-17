@@ -75,6 +75,7 @@ audioTrack.addEventListener("timeupdate", function (e) {
         let element = document.querySelector(`#c_${index}`);
         if (audioTrack.currentTime >= el.start && audioTrack.currentTime <= el.end) {
             element.classList.add('active');
+            element.scrollIntoView();
         }
         else{
             element.classList.remove('active');
