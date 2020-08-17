@@ -1,0 +1,47 @@
+article{
+    font-family: 'Kalam', cursive;
+    font-weight: bold;
+    font-size: large;
+}
+
+article div {
+    cursor: pointer;
+}
+
+.active {
+    background-color: bisque;
+    color: red;
+    font-weight: 900;
+    font-size: larger;
+}
+
+.hide {
+    display: none;
+}
+
+main {
+    background-image: linear-gradient(green, yellow);
+}
+
+.listen{
+    font-family: 'Kalam', cursive;
+    font-size: larger;
+    font-weight: bold;
+    margin-top: 10px;  
+}
+
+.listen:hover {
+    color: coral;
+}
+
+.listenagain{
+    font-family: 'Kalam', cursive;
+    font-size: larger;
+    font-weight: bold;
+    margin-top: 10px;  
+}
+
+.listenagain:hover {
+    color: coral;
+}
+
